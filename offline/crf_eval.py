@@ -3,7 +3,7 @@
 
 total = 0
 right = 0
-with open('log') as f:
+with open('test.predict') as f:
     for line in f:
         v = line.strip().split('\t')
         if len(v) < 3:
