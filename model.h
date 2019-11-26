@@ -6,11 +6,15 @@
  * 2019-11-25
  * virtual class of models
  */
+#include <vector>
+#include <string>
+using std::vector;
+using std::string;
 
 typedef struct {
-    vector<string> tokens,
-    vector<int> begin_idx,
-    vector<int> end_idx
+    vector<string> tokens;
+    vector<int> begin_idx;
+    vector<int> end_idx;
 } word_seg_t;
 
 class Model {

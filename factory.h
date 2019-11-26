@@ -6,12 +6,14 @@
  * factory.h
  * model factory, easy to extend
  */
+#include <map>
 #include "model.h"
 #include "crf_model.h"
+using std::map;
 
 class ModelMaker {
 public:
-    static Model *makeModel(const string model) {
+    Model *makeModel(const string model) {
         return _model_map.at(model);
     }
     static ModelMaker *getInstance() {
@@ -28,7 +30,7 @@ private:
             }
         }
     }
-    static void init() {
+    void init() {
         _model_map["CRF"] = new CRFModel();
     }
 private:

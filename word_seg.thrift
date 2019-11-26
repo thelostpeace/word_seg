@@ -13,6 +13,12 @@ struct WordSegResponse
     3: list<i32>            end_idx
 }
 
+exception WordSegException
+{
+    1: i32          err_code,
+    2: string       err_str
+}
+
 service WordSegService {
     WordSegResponse word_segment(1:WordSegRequest req) throws (1:WordSegException e)
 }
