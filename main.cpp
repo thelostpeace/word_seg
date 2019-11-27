@@ -48,7 +48,7 @@ public:
 };
 
 int main(int argc, char **argv) {
-    int port = 19292;
+    int port = 12019;
     int thread_num = 32;
 
     Model *model = ModelMaker::getInstance()->makeModel("CRF");

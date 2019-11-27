@@ -1,4 +1,5 @@
 namespace cpp WordSeg
+namespace py WordSeg
 
 struct WordSegRequest 
 {

@@ -313,6 +313,10 @@ class CRFPP_DLL_CLASS_EXTERN Tagger {
   // 'str' must be written in CRF++'s input format
   virtual const char* parse(const char* str) = 0;
 
+  // parse 'str' and return result as string
+  // 'str' must be written in CRF++'s input format
+  virtual const char* predict(const char* str) = 0;
+
 #ifndef SWIG
   // return parsed result as string
   virtual const char* toString() = 0;
